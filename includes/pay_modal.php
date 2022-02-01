@@ -78,7 +78,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="photo" class="col-sm-5 control-label">หลักฐานการชำระเงน</label>
+                    <label for="photo" class="col-sm-5 control-label">หลักฐานการชำระเงิน</label>
                     <div class="col-sm-5">
                       <input type="file" id="photo" name="photo">
                     </div>

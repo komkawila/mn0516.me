@@ -15,7 +15,7 @@
 			try{
 				$stmt = $conn->prepare("INSERT INTO cart (user_id, product_id, quantity) VALUES (:user_id, :product_id, :quantity)");
 				$stmt->execute(['user_id'=>$user['id'], 'product_id'=>$id, 'quantity'=>$quantity]);
-				$output['message'] = 'เพิ่มในตะกล้าแล้ว';
+				$output['message'] = 'เพิ่มในตะกร้าแล้ว';
 				
 			}
 			catch(PDOException $e){
@@ -25,7 +25,7 @@
 		}
 		else{
 			$output['error'] = true;
-			$output['message'] = 'สินค้าอยู่ในตะกล้าแล้ว';
+			$output['message'] = 'สินค้าอยู่ในตะกร้าแล้ว';
 		}
 	}
 	else{
@@ -41,18 +41,18 @@
 
 		if(in_array($id, $exist)){
 			$output['error'] = true;
-			$output['message'] = 'สินค้าอยู่ในตะกล้าแล้ว';
+			$output['message'] = 'สินค้าอยู่ในตะกร้าแล้ว';
 		}
 		else{
 			$data['productid'] = $id;
 			$data['quantity'] = $quantity;
 
 			if(array_push($_SESSION['cart'], $data)){
-				$output['message'] = 'เพิ่มในตะกล้าแล้ว';
+				$output['message'] = 'เพิ่มในตะกร้าแล้ว';
 			}
 			else{
 				$output['error'] = true;
-				$output['message'] = 'ไม่สามารถเพิ่มสิรค้าในตะกล้าได้';
+				$output['message'] = 'ไม่สามารถเพิ่มสิรค้าในตะกร้าได้';
 			}
 		}
 

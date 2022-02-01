@@ -10,7 +10,7 @@
 			$stmt = $conn->prepare("DELETE FROM category WHERE id=:id");
 			$stmt->execute(['id'=>$id]);
 
-			$_SESSION['success'] = 'ลบข้อมูลประเถทสินค้าสำเร็จ';
+			$_SESSION['success'] = 'ลบข้อมูลประเภทสินค้าสำเร็จ';
 		}
 		catch(PDOException $e){
 			$_SESSION['error'] = $e->getMessage();
@@ -19,7 +19,7 @@
 		$pdo->close();
 	}
 	else{
-		$_SESSION['error'] = 'ลบข้อมูลประเถทสินค้าไม่สำเร็จ';
+		$_SESSION['error'] = 'ลบข้อมูลประเภทสินค้าไม่สำเร็จ';
 	}
 
 	header('location: category.php');

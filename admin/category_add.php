@@ -12,13 +12,13 @@
 		$row = $stmt->fetch();
 
 		if($row['numrows'] > 0){
-			$_SESSION['error'] = 'ประเถทสินค้านี้ มีอยู่แล้ว';
+			$_SESSION['error'] = 'ประเภทสินค้านี้ มีอยู่แล้ว';
 		}
 		else{
 			try{
 				$stmt = $conn->prepare("INSERT INTO category (name,cat_slug) VALUES (:name,:cat_slug)");
 				$stmt->execute(['name'=>$name,'cat_slug'=>$cat_slug]);
-				$_SESSION['success'] = 'เพิ่มข้อมูลประเถทสินค้าสำเร็จ';
+				$_SESSION['success'] = 'เพิ่มข้อมูลประเภทสินค้าสำเร็จ';
 			}
 			catch(PDOException $e){
 				$_SESSION['error'] = $e->getMessage();
@@ -28,7 +28,7 @@
 		$pdo->close();
 	}
 	else{
-		$_SESSION['error'] = 'เพิ่มข้อมูลประเถทสินค้าไม่สำเร็จ';
+		$_SESSION['error'] = 'เพิ่มข้อมูลประเภทสินค้าไม่สำเร็จ';
 	}
 
 	header('location: category.php');

@@ -60,7 +60,7 @@
               <span class="label label-success cart_count"></span>
             </a>
             <ul class="dropdown-menu">
-              <li class="header">สินค้าทั้งหมดในตะกล้า <span class="cart_count"></span> รายการ</li>
+              <li class="header">สินค้าทั้งหมดในตะกร้า <span class="cart_count"></span> รายการ</li>
               <li>
                 <ul class="menu" id="cart_menu">
                 </ul>

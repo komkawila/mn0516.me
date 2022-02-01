@@ -59,7 +59,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="email" class="col-sm-3 control-label">อีเมล์</label>
+                    <label for="email" class="col-sm-3 control-label">อีเมล</label>
 
                     <div class="col-sm-9">
                       <input type="text" class="form-control" id="email" name="email" value="<?php echo $user['email']; ?>">

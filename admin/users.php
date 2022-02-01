@@ -53,7 +53,7 @@
               <table id="example1" class="table table-bordered">
                 <thead>
                   <th>รูป</th>
-                  <th>อีเมล์</th>
+                  <th>อีเมล</th>
                   <th>ชื่อ</th>
                   <th>สถานะ</th>
                   <th>วันที่สมัคร</th>
